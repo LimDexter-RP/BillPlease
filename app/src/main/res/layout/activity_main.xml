@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20px"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:digits="1234567890"
+        android:text="@string/amt" />
+
+    <EditText
+        android:id="@+id/editInputAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter The Amount"
+        android:inputType="phone" />
+
+    <TextView
+        android:id="@+id/num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pax" />
+
+    <EditText
+        android:id="@+id/editInputNumPax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Number Of Pax"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/tbSvs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15px"
+            android:layout_marginRight="15px"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:textOff="@string/svs"
+            android:textOn="SVS" />
+
+
+        <ToggleButton
+            android:id="@+id/tbGst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:textOff="NO GST"
+            android:textOn="GST" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/discount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Dis" />
+
+    <EditText
+        android:id="@+id/editDiscount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter The Discount"
+        android:inputType="textPersonName" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/rgMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButtoncash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cash" />
+
+            <RadioButton
+                android:id="@+id/radioButtonPayNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/paynow" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/split"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20px"
+            android:layout_marginRight="20px"
+            android:layout_weight="1"
+            android:text="@string/split"
+            android:textColor="@color/black"
+            app:backgroundTint="@android:color/darker_gray" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/reset"
+            android:textColor="@color/black"
+            app:backgroundTint="@android:color/darker_gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textTotalBill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/totalbill"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textEachPays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/eachpay"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>
